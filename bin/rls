@@ -1,0 +1,11 @@
+#!/usr/bin/env ruby
+
+require_relative "../lib/rls"
+
+begin
+  RLs::Application.new(ARGV).run
+rescue Errno::ENOENT => err
+  abort "ruby-ls: #{err.message}"
+rescue OptionParser::InvalidOption => err
+  abort "ruby-ls: illegal option -- #{ARGV[0].sub(/-/,'')}\nusage: ruby-ls [-ABCFGHLOPRSTUWabcdefghiklmnopqrstuwx1] [file ...]"
+end

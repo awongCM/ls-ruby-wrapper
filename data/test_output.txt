@@ -1,0 +1,29 @@
+192-168-182-129:data andywong$ ls
+gettysburg.txt	ls_tests.rb	spaced_out.txt
+192-168-182-129:data andywong$ ls foo
+ls: foo: No such file or directory
+192-168-182-129:data andywong$ ls foo/*.txt
+ls: foo/*.txt: No such file or directory
+192-168-182-129:data andywong$ ls -l
+total 24
+-rw-r--r--  1 andywong  staff  1475 30 Nov 16:51 gettysburg.txt
+-rw-r--r--  1 andywong  staff    97 30 Nov 16:37 ls_tests.rb
+-rw-r--r--  1 andywong  staff   387 30 Nov 16:52 spaced_out.txt
+192-168-182-129:data andywong$ ls -a
+.		..		.DS_Store	gettysburg.txt	ls_tests.rb	spaced_out.txt
+192-168-182-129:data andywong$ ls -a -l
+total 40
+drwxr-xr-x   6 andywong  staff   204 30 Nov 16:52 .
+drwxr-xr-x  10 andywong  staff   340  1 Dec 20:04 ..
+-rw-r--r--@  1 andywong  staff  6148 30 Nov 16:49 .DS_Store
+-rw-r--r--   1 andywong  staff  1475 30 Nov 16:51 gettysburg.txt
+-rw-r--r--   1 andywong  staff    97 30 Nov 16:37 ls_tests.rb
+-rw-r--r--   1 andywong  staff   387 30 Nov 16:52 spaced_out.txt
+192-168-182-129:data andywong$ ls -l foo/*.txt
+ls: foo/*.txt: No such file or directory
+192-168-182-129:data andywong$ ls missingdir
+ls: missingdir: No such file or directory
+192-168-182-129:data andywong$ ls -Z
+ls: illegal option -- Z
+usage: ls [-ABCFGHLOPRSTUWabcdefghiklmnopqrstuwx1] [file ...]
+192-168-182-129:data andywong$ 
